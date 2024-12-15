@@ -1,15 +1,10 @@
-
-import { useState } from "react";
 import "./App.css";
-import SimpleStateExample from "./Components/SimpleStateExample";
+import Counter from "./Components/Counter";
 
 function App() {
-  
-  
   return (
     <>
-    <SimpleStateExample/>
-   
+      <Counter />
     </>
   );
 }
