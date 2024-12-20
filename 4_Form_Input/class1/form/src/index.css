@@ -11,10 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.user{
-  background-color: rgb(24, 54, 54);
-  width: 20%;
-  margin: auto;
-  color: white;
-  /* padding: 1rem; */
-}

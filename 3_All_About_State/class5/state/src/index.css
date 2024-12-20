@@ -12,9 +12,9 @@ code {
     monospace;
 }
 .user{
-  background-color: rgb(24, 54, 54);
-  width: 20%;
-  margin: auto;
+  background-color: rgb(53, 158, 158);
   color: white;
-  /* padding: 1rem; */
+  margin: 5px auto;
+  padding: 1rem;
+  width: 50%;
 }
