@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { toast} from 'react-toastify';
 
-//show toast message if input field is empty
-//show toast message if password and confirm not password
+// show toast message if input field is empty
+// show toast message if password and confirm not password
 // show if leave input with red border
 // show password and confirm password not match on live
 // clear input field
-//
+// 
 
 function HandleMultipleInputs() {
 
@@ -49,7 +49,7 @@ function HandleMultipleInputs() {
         ...currentState,
         [e.target.id]: false,
       }));
-      
+
       // Real-time validation for confirmPassword
     if (e.target.id === 'confirmPassword') {
         if (e.target.value !== password) {
