@@ -1,14 +1,15 @@
 import { useState } from "react";
 import Todoform from "./Components/Todoform";
 import Todos from "./Components/Todos";
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
 
   const [todos,setTodos]=useState([
-    {id:1,title:"go to movie",completed:false},
-    {id:2,title:"go to class",completed:true},
-    {id:3,title:"go to college",completed:false},
+    {id:1,title:"Go to movie",completed:false},
+    {id:2,title:"Go to class",completed:true},
+    {id:3,title:"Go to college",completed:false},
   ]);
 
   const addTodo=(newTodo)=>{
@@ -29,11 +30,23 @@ function App() {
       })
      })
    }
+
+   function handleRemove(id){
+
+    //  setTodos((currentState)=>{
+    //     return currentState.filter((todo)=>{
+    //            return todo.id !== id
+    //     })
+    //  })
+
+     setTodos((currentState)=>currentState.filter((todo)=>todo.id !== id))
+   }
   return (
-    <div >
+    <div className="container">
+      <ToastContainer />
       <h1 className="main-list">Todo-List</h1>
       <Todoform  addTodo={addTodo}/>
-      <Todos  todos={todos} toggleCompleted={toggleCompleted}/>
+      <Todos  todos={todos} toggleCompleted={toggleCompleted} handleRemove={handleRemove}/>
     </div>
   );
 }
