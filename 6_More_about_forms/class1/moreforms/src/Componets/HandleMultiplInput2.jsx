@@ -97,7 +97,6 @@ function HandleMultiplInput2() {
         })
        
     }
-
   return (
     
     <form action="" style={{marginLeft:"1rem"}} onSubmit={handleSubmit}>
