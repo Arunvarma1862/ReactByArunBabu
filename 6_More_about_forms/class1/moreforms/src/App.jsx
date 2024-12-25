@@ -1,7 +1,8 @@
 
 import Radio from './Componets/Radio';
 import HandleMultipleInputs from './Componets/HandleMultipleInputs';
-import HandleMultiplInput2 from './Componets/HandleMultiplInput2';
+// import HandleMultiplInput2 from './Componets/HandleMultiplInput2';
+import ExampleUseRef from './Componets/ExampleUseRef';
 import { ToastContainer} from 'react-toastify';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       {/* <Radio/> */}
       <ToastContainer/>
       {/* <HandleMultipleInputs/> */}
-      <HandleMultiplInput2/>
+      {/* <HandleMultiplInput2/> */}
+        <ExampleUseRef/>
     </div>
   );
 }

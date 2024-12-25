@@ -3,7 +3,7 @@ import Todoform from "./Components/Todoform";
 import Todos from "./Components/Todos";
 import { ToastContainer } from 'react-toastify';
 
-
+// lifiting up the state
 function App() {
 
   const [todos,setTodos]=useState([

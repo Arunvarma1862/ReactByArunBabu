@@ -16,13 +16,14 @@ function Radio() {
 // }
   return (
     <div>
-    <h1>Radio buttons</h1>
+    <h1>Radio Buttons</h1>
     <label htmlFor="" >Male</label>
     <input type="radio" checked={gender==="male"}  onChange={()=>{setgender("male")}} />
     <br></br>
     <label htmlFor="">Female</label>
     <input type="radio"checked={gender==="female"} onChange={()=>{setgender("female")}} />
     </div>
+    
    
   )
 }

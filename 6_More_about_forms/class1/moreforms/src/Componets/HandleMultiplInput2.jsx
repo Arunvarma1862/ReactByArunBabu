@@ -124,7 +124,7 @@ function HandleMultiplInput2() {
         </div>
         <div className="formGroup">
             <label htmlFor="password">Password</label><br/>
-            <input type="password" name='password' id='password' value={password} onChange={handleChange} onBlur={handleBlur} style={{border:password?"2px solid red": "1px solid grey"}} />
+            <input type="password" name='password' id='password' value={password} onChange={handleChange} onBlur={handleBlur} style={{border:errors.password?"2px solid red": "1px solid grey"}} />
             {errors.password  && <p style={{color:"red"}}>password is required</p>}
 
         </div>
