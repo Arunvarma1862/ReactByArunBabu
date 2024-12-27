@@ -14,26 +14,26 @@ import UserForm from "./Components/UserForm";
 // react is a state Management, if it is not managing  it is sideEffect
 function App() {
   const [showComponent, setShowComponent] = useState(true);
- 
+
   return (
     <>
       <div className="App">
-        {/* <ExampleUseEffect /> */}
-        {/* <FectApi/> */}
-        {/* <FetchApi2/> */}
-        {/* <FetchApi3/> */}
         <label htmlFor="showComponent">ShowComponent</label>
         <input
           type="checkbox"
           name="showComponent"
           id="showComponent"
           checked={showComponent}
-          onChange={()=>setShowComponent(!showComponent)}
+          onChange={() => setShowComponent(!showComponent)}
         />
+          {/* {showComponent && <ExampleUseEffect />} */}
+        {/* {showComponent && <FectApi />} */}
+        {showComponent && <FetchApi2 />}
+        {/* {showComponent && <FetchApi3 />}  */}
         {/* {showComponent && <CleanUpFunction />} */}
         {/* {showComponent && <MouseMove />} */}
         {/* {showComponent && <FetchApi2 />} */}
-        {showComponent && <UserForm />}
+        {/* {showComponent && <UserForm />} */}
       </div>
     </>
   );

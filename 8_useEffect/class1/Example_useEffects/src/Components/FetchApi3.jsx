@@ -5,38 +5,34 @@ const URL = "https://jsonplaceholder.typicode.com/usersss";
 function FetchApi3() {
   const [user, setUsers] = useState([]);
   const [isLoading, setisLoading] = useState(true);
-  const [isError,setIsError]= useState(false);
-  const [errorMsg,setErrorMsg]=useState("")
+  const [isError, setIsError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   async function fetchData() {
     const response = await fetch(URL);
     console.log(response);
-    if(!(response.status >=200 && response.status<=299)){
-         setIsError(true)
-         setErrorMsg(`${response.status} Not found Err`)
-         setisLoading(false)
-         return
+    if (!(response.status >= 200 && response.status <= 299)) {
+      setIsError(true);
+      setErrorMsg(`${response.status} Not found Err`);
+      setisLoading(false);
+      return;
     }
     const data = await response.json();
     console.log(data);
     setUsers(data);
-    setisLoading(false)
+    setisLoading(false);
   }
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  
   if (isLoading) {
-     return  <h1 style={{ textAlign: "center" }}>Loading...</h1>;
+    return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
   }
-  if(isError){
-    return <h1 style={{textAlign:"center"}}>{errorMsg}</h1>
+  if (isError) {
+    return <h1 style={{ textAlign: "center" }}>{errorMsg}</h1>;
   }
-
-
-  
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 
-// useEffect-sideEffects(like not related to react like example data fetch, addEventListener ,etc)
+// useEffect-sideEffects(like not related to react,example data fetch, addEventListener ,etc)
 
 // cleanup function runs when 
 // 1: Before the component unmount

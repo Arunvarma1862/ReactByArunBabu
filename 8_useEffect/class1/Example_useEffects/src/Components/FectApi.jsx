@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
 
 const URL = "https://jsonplaceholder.typicode.com/users";
+
 // use promise to fecth data
 // use async await to fecth data
 function FectApi() {
   const [user, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch(URL).then((response)=>{
-        return response.json()
-    }).then((data)=>{
+    fetch(URL)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
         console.log(data);
-        setUsers(data)
-    })
+        setUsers(data);
+      });
   }, []);
   return (
     <div>
