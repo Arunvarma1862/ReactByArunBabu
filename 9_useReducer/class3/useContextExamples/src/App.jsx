@@ -19,7 +19,6 @@ import { createContext } from "react";
 export const Myappcontext= createContext()
 
 function App() {
-
   function myfunc(){
     console.log("my func ")
   }
@@ -38,5 +37,5 @@ function App() {
     </Myappcontext.Provider>
   );
 }
-
+ 
 export default App;

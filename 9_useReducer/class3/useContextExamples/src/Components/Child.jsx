@@ -12,6 +12,6 @@ function Child() {
          <Grandchild/>
     </div>
   )
-}
+}  
 
 export default Child

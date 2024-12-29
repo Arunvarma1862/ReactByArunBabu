@@ -1,24 +1,8 @@
 import React from "react";
+import { useTodo } from "./TodoProvider";
 
-function Todolist({ id, title, completed,dispatch }) {
-
-    function handledelete(){
-        dispatch({
-            type:"DELETE",
-            payload:{
-                id:id
-            }
-        })
-    }
-
-    function handleToggle(){
-        dispatch({
-            type:"TOGGLE",
-            payload:{
-                id:id
-            }
-        })
-    }
+function Todolist({ id, title, completed }) {
+ const {handleToggle,handledelete}=useTodo()
   return (
     <div
       className="todolist"
@@ -27,8 +11,8 @@ function Todolist({ id, title, completed,dispatch }) {
       <p>id:{id}</p>
       <p  style={{textDecoration:completed?"line-through":"solid"}}>title:{title}</p>
       <p>status:{completed ? "true" : "false"}</p>
-      <button onClick={handledelete}>Remove</button>
-      <button onClick={handleToggle}>toggleCompleted</button>
+      <button onClick={()=>{handledelete(id)}}>Remove</button>
+      <button onClick={()=>{handleToggle(id)}}>toggleCompleted</button>
     </div>
   );
 }
