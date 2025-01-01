@@ -23,7 +23,7 @@ function Header() {
   },[isModalOpen])
 
   // let TotalCartLength=0
-  // for(let item of cart){
+  //   for(let item of cart){
   //  TotalCartLength += item.quantity
   // }
 
