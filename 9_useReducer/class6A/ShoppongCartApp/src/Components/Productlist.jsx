@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Productlist.module.css"
 import { useCart } from '../Provider/CartProvider'
-import { toast, ToastContainer } from 'react-toastify';
+import { toast} from 'react-toastify';
 
 function Productlist({id,title,img,price}) {
     const {cart,addCart}=useCart()
@@ -29,13 +29,13 @@ function Productlist({id,title,img,price}) {
 
   return (
     <div className={styles.products}>
-        <p>id:{id}</p>
-        <img src={img} alt={title} style={{ height:"200px"}} />
-        <p>title:{title}</p>
-        <p>price:{price}</p>
-        <button onClick={handleAddCartItem}>Add to cart</button>
+        {/* <p>id:{id}</p> */}
+        <img src={img} alt={title} className={styles.image} />
+        <p className={styles.title}>{title}</p>
+        <p className={styles.price}>&#8377;{price}</p>
+        <button onClick={handleAddCartItem} className={styles.cartButton}>Add to cart</button>
     </div>
-  )
+  ) 
 }
 
 export default Productlist

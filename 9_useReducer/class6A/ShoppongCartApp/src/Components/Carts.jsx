@@ -2,6 +2,8 @@ import React from 'react'
 import { useCart } from '../Provider/CartProvider'
 import Cartlist from './Cartlist'
 import { FaWindowClose } from "react-icons/fa";
+import Container from "./UI/Container"
+import styles from "./Carts.module.css"
 
 function Carts({cartClose}) {
     const {cart} =useCart()
@@ -17,18 +19,18 @@ function Carts({cartClose}) {
         </>  
         )
     }
-   
+    
   return (
-    <>
-    <div style={{display:"flex",alignItems:"center",justifyContent:"space-between", margin:" 0 1rem 1rem 1rem"}}>
-        <h1>Shopping Cart</h1>
-        <span onClick={cartClose} style={{fontSize:"24px", cursor:"pointer"}}><FaWindowClose/></span>
+    <Container>
+    <div className={styles.cart}>
+        <h2 className={styles.headings}>Shopping Cart</h2>
+        <span onClick={cartClose} className={styles.closeButton}><FaWindowClose/></span>
     </div>  
     <div>{cart.map((item)=>{
         return <Cartlist key={item.id} {...item}/>
     })}</div>
-    <h1>TotalAmount :&#8377;{TotalAmount}</h1>
-    </>
+    <h1>TotalAmount :&#8377; {TotalAmount}</h1>
+    </Container>
   )
 }
 

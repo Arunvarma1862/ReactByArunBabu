@@ -1,0 +1,15 @@
+.cart{
+    display:flex;
+    align-items:center;
+    justify-Content:space-between;
+    margin: 0 1rem 1rem 1rem;
+    margin-bottom: 2rem;
+}
+.closeButton{
+   font-Size:24px;
+   cursor:pointer;
+}
+.headings{
+    font-weight: 500;
+}
+

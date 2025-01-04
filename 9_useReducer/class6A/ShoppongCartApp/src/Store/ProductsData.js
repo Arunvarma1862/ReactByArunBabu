@@ -39,11 +39,12 @@ export const product=[
     {
         id: 7,
         img: "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/3/a/5/s-t852-highkind-original-imah6g3afsfy5bhg.jpeg?q=70",
-        title: "Polka Print Bollywood Georgette Saree  (White)",
+        title: "Polka Print Bollywood Georgette shirt (White)",
         price: 819,
     },
     {
         id: 8,
+        title: "Polka Print Bollywood Georgette Saree  (White)",
         img: "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/q/f/k/free-vs-gr-936-all-leelavati-unstitched-original-imahfg5zjqvzr4qz.jpeg?q=70",
         price: 259,
     },
