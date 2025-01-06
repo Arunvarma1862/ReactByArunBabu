@@ -3,6 +3,13 @@ import { useEffect } from 'react'
 import Postlist from '../Components/Postlist'
 
 // component mount- data fetch
+//loader
+// fecth-component mount
+
+//6.4+
+//loader function
+//form
+//actions
 
 const endpoint="https://jsonplaceholder.typicode.com/posts"
 function Post() {

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet ,Link,NavLink} from 'react-router-dom'
 import styles from "./RootLayout.module.css"
+import { useAuth } from '../Context/AuthProvider'
 
 
 // Nested Routes- Route Parent and Route childs
@@ -8,7 +9,8 @@ import styles from "./RootLayout.module.css"
 // link-not refresh the whole content when compare to anchor  tag <a>
 
 function RootLayout() {
-  return (
+     const {isLoggedIn,setisLoggedIn}=useAuth()
+  return ( 
     <div>
         <h1>Nav</h1>
         <ul>
@@ -24,6 +26,15 @@ function RootLayout() {
             <li><NavLink to="post" className={(obj)=>{
                 return obj.isActive ? styles.activeNav:null
             }}>Post</NavLink></li>
+            {!isLoggedIn &&   <li><NavLink to="login" className={(obj)=>{
+                return obj.isActive ? styles.activeNav:null
+            }}>Login</NavLink></li>}
+            <br />
+              {isLoggedIn && <button onClick={()=>{
+                setisLoggedIn(false)
+              }}>Logout</button>}
+            
+            
             
         </ul>
         <hr />
