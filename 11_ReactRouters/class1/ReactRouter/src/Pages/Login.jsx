@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from '../Context/AuthProvider'
-import { useNavigate ,useLocation} from "react-router-dom";
+import { useNavigate ,useLocation,useSearchParams} from "react-router-dom";
 
 function Login() {
     const {isLoggedIn,setisLoggedIn}=useAuth()
-    const location =useLocation()
-    console.log(location)
-    const previousPath=location.state?.previousPath || "/"
+    // const location =useLocation()
+    // console.log(location)
+    const[searchParams]=useSearchParams()
+    const previousPath=searchParams.get("redirectTo") || "/"
     const navigate= useNavigate()
-    function login(){
+    useEffect(()=>{
+        if(isLoggedIn){
+          console.log(previousPath)
+          navigate(previousPath,{replace:true})
+        }
+    },[isLoggedIn])
+    function login(){ 
       setisLoggedIn(true) 
-      navigate(previousPath,{replace:true})
+
     }
   return (
     <>

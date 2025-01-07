@@ -4,7 +4,7 @@ import { useAuth } from '../Context/AuthProvider'
 
 function RequiredAuth({children}) {
   const location =useLocation() 
-  console.log(location)
+  // console.log(location)
     const {isLoggedIn,setisLoggedIn}=useAuth()
     if(isLoggedIn){
         return children

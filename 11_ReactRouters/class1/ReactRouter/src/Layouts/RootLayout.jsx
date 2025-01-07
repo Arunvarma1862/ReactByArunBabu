@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet ,Link,NavLink} from 'react-router-dom'
+import { Outlet ,Link,NavLink, useNavigation} from 'react-router-dom'
 import styles from "./RootLayout.module.css"
 import { useAuth } from '../Context/AuthProvider'
 
@@ -10,10 +10,13 @@ import { useAuth } from '../Context/AuthProvider'
 
 function RootLayout() {
      const {isLoggedIn,setisLoggedIn}=useAuth()
+     const navigation=useNavigation()
+     console.log(navigation)
   return ( 
     <div>
         <h1>Nav</h1>
         <ul>
+            {/* <li><NavLink to="/login">Login</NavLink></li> */}
             <li><NavLink to="/" className={(obj)=>{
                 return obj.isActive ? styles.activeNav:null
             }}>Home</NavLink></li>
@@ -40,7 +43,8 @@ function RootLayout() {
         <hr />
         <main>
             {/* <h1>Main Content</h1> */}
-            <Outlet/>
+            {navigation.state==="loading"?<h1>Loading...</h1>:<Outlet/>}
+            
         </main>
     </div>
   )
