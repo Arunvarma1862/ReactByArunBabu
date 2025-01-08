@@ -12,7 +12,7 @@ import { redirect, useLoaderData } from 'react-router-dom'
 //form
 //actions
 
-//loader 
+// loader 
 // step1:- provide loaders function to the route
 // step2:- useLoaderData to get data
 

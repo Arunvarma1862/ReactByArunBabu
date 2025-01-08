@@ -1,0 +1,11 @@
+.activeNav{
+    background-color: blue;
+    color: white;
+    padding: 0.6px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}

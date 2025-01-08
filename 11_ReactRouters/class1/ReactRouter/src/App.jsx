@@ -14,7 +14,7 @@ import { fetchData } from "./Pages/Post";
 import { loader as fetchPost } from "./Pages/PostDetails";
 
 function App() {
-  const { isLoggedIn} = useAuth();
+  const { isLoggedIn} = useAuth(); 
   // step2- create Router
   const router = createBrowserRouter(
     createRoutesFromElements(

@@ -35,10 +35,7 @@ function RootLayout() {
             <br />
               {isLoggedIn && <button onClick={()=>{
                 setisLoggedIn(false)
-              }}>Logout</button>}
-            
-            
-            
+              }}>Logout</button>}           
         </ul>
         <hr />
         <main>
