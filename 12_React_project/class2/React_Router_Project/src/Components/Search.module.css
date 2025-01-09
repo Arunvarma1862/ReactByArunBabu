@@ -1,0 +1,32 @@
+.form{
+    margin: auto;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    background-color: var( --pure-white-color);
+}
+.form input{
+    width: 85%;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 0.2rem;
+
+}
+.form button{
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    font-weight: 600;
+
+
+}
