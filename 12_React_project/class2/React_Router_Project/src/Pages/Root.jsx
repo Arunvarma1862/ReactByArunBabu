@@ -10,7 +10,7 @@ function Root() {
   return (
     <div>
       <nav className={`container ${styles.nav}`}>
-         <Link to="/">Movie Search</Link>
+         <Link to="/"><h1>Movie Search</h1></Link>
       </nav>
           
         <main>
