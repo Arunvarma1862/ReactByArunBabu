@@ -14,7 +14,7 @@ function InputForm({children}) {
           {children}
         <button type="submit" onClick={()=>setUsername("")}>clear input</button>
     </form>
-  )
+  ) 
 }
 
 export default InputForm

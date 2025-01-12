@@ -9,7 +9,7 @@ function BasicApp() {
       <InputForm>
         <ExtraComponent />
       </InputForm>
-    </div>
+    </div> 
   );
 }
 

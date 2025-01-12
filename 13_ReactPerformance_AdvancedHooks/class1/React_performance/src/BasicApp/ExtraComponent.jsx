@@ -10,4 +10,4 @@ function ExtraComponent() {
   )
 }
 
-export default ExtraComponent
+export default ExtraComponent 
