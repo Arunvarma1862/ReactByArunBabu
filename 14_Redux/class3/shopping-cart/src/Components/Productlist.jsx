@@ -6,7 +6,7 @@ import { toast} from 'react-toastify';
 
 function Productlist({id,title,img,price}) {
     const dispatch =useDispatch()
-   const cart =useSelector((state)=>state.mycart)
+     const cart =useSelector((state)=>state.mycart)
     
     function handleAddCartItem(){
          for(let item of cart){
