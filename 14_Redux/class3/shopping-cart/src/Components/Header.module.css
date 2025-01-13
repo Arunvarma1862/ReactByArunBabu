@@ -1,0 +1,46 @@
+ .header{
+    margin: 0.1rem;
+    background-color: #3879a5;
+    margin-bottom: 1rem;
+    color: #efefef;
+    /* padding-top: 0.5rem; */
+ }
+ 
+ .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+ }
+ .cart{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    
+ }
+ .cartButtons{
+     background: transparent;
+     color: white;
+     border: none;
+     position: relative;
+ }
+ .number{
+    position: absolute;
+    top:6px;
+    right: 155px;
+    color:red;
+    font-Size:15px;
+    border: 1px solid white;
+    color:white;
+    background-color: red;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    line-height: 1.2;
+    font-size: 8px;
+    text-align: center;
+    padding: 2px;
+    
+
+ }

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = [
   {
@@ -17,31 +17,43 @@ const TodoSlice = createSlice({
   name: "todos",
   initialState: initialState,
   reducers: {
-    AddTodos: (state, action) => {
-      return [ action.payload,...state];
+    AddTodos: {
+      reducer: (state, action) => {
+        // reducer run second
+        return [action.payload, ...state];
+      },
+      prepare: (title) => {
+        // prepare run first
+        return {
+          payload: {
+            id: nanoid().slice(0, 5),
+            title: title,
+            completed: false,
+          },
+        };
+      },
     },
     //    state.push(action.payload)
 
-    RemovoTodo: (state,action) => {
-        console.log(action.payload)
-        return state.filter((item)=> item.id !== action.payload.id)
+    RemovoTodo: (state, action) => {
+      console.log(action.payload);
+      return state.filter((item) => item.id !== action.payload.id);
     },
-    ToggleCompleted: (state,action) => {
-
-      state.forEach((todo)=>{
-        if(todo.id ==action.payload){
-            todo.completed =!todo.completed
+    ToggleCompleted: (state, action) => {
+      state.forEach((todo) => {
+        if (todo.id == action.payload) {
+          todo.completed = !todo.completed;
         }
-      })
+      });
 
-    //   return state.map((item)=>{
-    //     if(item.id==action.payload){
-    //         return {...item,completed:!item.completed}
-    //     }
-    //     else{
-    //         return item
-    //     }
-    //   })
+      //   return state.map((item)=>{
+      //     if(item.id==action.payload){
+      //         return {...item,completed:!item.completed}
+      //     }
+      //     else{
+      //         return item
+      //     }
+      //   })
     },
   },
 });

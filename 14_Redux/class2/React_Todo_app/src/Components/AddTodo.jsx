@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AddTodos } from "../Features/Todos/TodoSlice";
-import { nanoid } from "@reduxjs/toolkit";
+
 
 function AddTodo() {
    const [title,setTitle]=useState("")
    const dispatch=useDispatch()
+
    function handleSubmit(e){
     e.preventDefault()
-    const newTodo={
-        id:nanoid().slice(0,5),title:title,completed:false
-    }
-    dispatch(AddTodos(newTodo))
+    dispatch(AddTodos(title))
     setTitle("")
    }
   return (
