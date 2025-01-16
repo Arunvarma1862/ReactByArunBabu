@@ -18,7 +18,6 @@ function Todoform() {
             return toast.error("Please fill the input field", {autoClose:2000})
          }
         setIsLoading(true)
-       
         dispatch(addTodos(title)).unwrap().then(()=>{
           setTitle("")
         }).catch((err)=>{
