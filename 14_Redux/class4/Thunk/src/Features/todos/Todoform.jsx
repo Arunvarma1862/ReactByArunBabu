@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import {useDispatch} from "react-redux"
 import { addTodos } from './todo.Slice';
 import bouncedLoader from "../../assets/bouncedLoader.svg";
+import { toast, ToastContainer} from 'react-toastify';
+
 
 
 function Todoform() {
@@ -11,8 +13,12 @@ function Todoform() {
     const dispatch= useDispatch()
     const [title,setTitle]=useState("")
     function handleSubmit(e){
-      setIsLoading(true)
-        e.preventDefault();
+          e.preventDefault();
+         if(title.trim().length===0){
+            return toast.error("Please fill the input field", {autoClose:2000})
+         }
+        setIsLoading(true)
+       
         dispatch(addTodos(title)).unwrap().then(()=>{
           setTitle("")
         }).catch((err)=>{
@@ -20,9 +26,10 @@ function Todoform() {
         }).finally(()=>{
           setIsLoading(false)
         })
-       
+        toast.info("New Todo added",{autoClose:2000})  
+      
     }
- 
+   
   return (
     <form action="" onSubmit={handleSubmit}>
         <input type="text" name='title' id='title' value={title} onChange={(e)=>setTitle(e.target.value)} autoComplete='off' />
