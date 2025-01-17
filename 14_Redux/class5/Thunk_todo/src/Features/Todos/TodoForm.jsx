@@ -12,7 +12,7 @@ function TodoForm() {
       e.preventDefault()
       if(title.trim().length===0){
         return toast.error("please fill the input field",{
-          autoClose:2000
+          autoClose:500
         })
       }
        setIsLoading(true)  
@@ -24,7 +24,7 @@ function TodoForm() {
       setIsLoading(false)
     })
 
-    toast.info("Todo item Added!!!!",{autoClose:2000})
+    toast.info("Todo item Added!!!!",{autoClose:500})
    
   }
   return (

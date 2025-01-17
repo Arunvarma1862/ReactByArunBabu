@@ -27,13 +27,22 @@ export const deleteTodos = createAsyncThunk("todos/delete", async (id) => {
 });
 export const ToggleTodos = createAsyncThunk(
   "todos/toggle",
-  async ({id, completed ,title}) => {
+  async ({id, completed }) => {
     const response = await axios.patch(`http://localhost:8002/todos/${id}`, {
       completed: !completed,
-      title:title
+     
     });
     console.log(response);
     console.log(response.data);
+    return response.data;
+  }
+);
+export const EditTodo = createAsyncThunk(
+           "todos/edit",
+  async ({id,title}) => {
+    const response = await axios.patch(`http://localhost:8002/todos/${id}`, {
+      title:title
+    });
     return response.data;
   }
 );
@@ -78,12 +87,23 @@ const todoSlice = createSlice({
        state.data.forEach((todo)=>{
          if(todo.id == action.payload.id){
              todo.completed = action.payload.completed
-             todo.title=action.payload.title
          }
          else{
              return todo
          }
        });
+    })
+    builders.addCase(EditTodo.fulfilled,(state,action)=>{
+      console.log(action)
+      console.log(action.payload.id)
+     state.data.forEach((todo)=>{
+       if(todo.id == action.payload.id){
+           todo.title=action.payload.title
+       }
+       else{
+           return todo
+       }
+     });
     })
   }
 });
