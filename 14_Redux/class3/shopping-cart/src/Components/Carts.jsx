@@ -8,7 +8,7 @@ import styles from "./Carts.module.css"
 function Carts({cartClose}) {
     const cart = useSelector((state)=>{
          return state.mycart
-       })
+       }) 
     let TotalAmount= cart.reduce((acc,item)=>{
         return acc+item.price*item.quantity
     },0)

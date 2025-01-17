@@ -13,7 +13,7 @@ function App() {
         hideProgressBar={true}
         autoClose={2000}
       />
-      <Header />
+      <Header /> 
       <Products />
     </Provider>
   );

@@ -5,7 +5,7 @@ const cartSlice=createSlice({
     initialState:[],
     reducers:{
         addCart:(cart,action)=>{
-            //immer js
+            //immer js 
             cart.push(action.payload)
             // return [...cart,action.payload]
         },

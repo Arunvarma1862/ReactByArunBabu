@@ -7,7 +7,7 @@ import {useDispatch} from "react-redux"
 function Cartlist({id,title,price,img,quantity}) {
   const dispatch =useDispatch()
 
-    function handleDecQty(){
+    function handleDecQty(){ 
         if(quantity <=1){
             return
         }
