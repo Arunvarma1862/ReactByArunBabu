@@ -34,6 +34,7 @@ function PostDetails() {
         {singlePost && <>
             <p>id:{singlePost.id}</p>
             <p>title:{singlePost.title}</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur hic optio veniam quisquam ea. Beatae voluptatem, veritatis obcaecati ullam a tempora tenetur nihil temporibus ipsum exercitationem, consequuntur id cupiditate corrupti possimus quae nisi dolore quam nulla! Tempora vero at numquam magni, quas, sunt, ea inventore hic deserunt nam ut asperiores!</p>
         </>}
        </div>
   )
