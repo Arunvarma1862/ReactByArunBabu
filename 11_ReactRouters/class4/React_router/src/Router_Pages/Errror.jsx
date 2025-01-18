@@ -1,11 +1,11 @@
 import React from 'react'
 import { useRouteError } from 'react-router-dom'
 
-function Error() {
-  const error=useRouteError()
+function Errror() {
+  const error= useRouteError()
   return (
     <div>{error.message}</div>
   )
 }
- 
-export default Error
+
+export default Errror

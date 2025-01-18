@@ -9,7 +9,7 @@ function AuthProvider({children}) {
     <AuthContext.Provider value={{isLogged,setLogged}}>{children}</AuthContext.Provider>
   )
 }
-
+ 
 export function useAuth(){
     return useContext(AuthContext)
 }

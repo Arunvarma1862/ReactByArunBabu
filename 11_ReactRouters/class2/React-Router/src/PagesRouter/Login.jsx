@@ -7,7 +7,7 @@ function Login() {
   const location =useLocation()
   console.log(location)
   const previousPath=location.state?.previousPath || "/"
-  const navigate= useNavigate()
+  const navigate= useNavigate() 
   function login(){
     setLogged(true)
     navigate(previousPath,{replace:true}) // replace:true, wont navigate to loginpage

@@ -7,8 +7,8 @@ import { useNavigation } from "react-router-dom";
 function RootLayout() {
     const {isLoggedIn,setLoggedIn}=useAuth()
     const navigation =useNavigation()
-  return (
-    <>
+  return ( 
+    <> 
       <h1>Nav</h1>
       <header>
         <nav>

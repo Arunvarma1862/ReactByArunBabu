@@ -11,7 +11,7 @@ import {
   Contact,
   Posts,
   Error,
-  PostDetails,
+  PostDetails, 
   Login,
 } from "./Pages";
 import RootLayout from "./Layouts/RootLayout";
@@ -19,7 +19,7 @@ import RequiredAuth from "./Components/RequiredAuth";
 import { loader as fetchPosts } from "./Pages/Posts";
 import { loader as fetchSinglePost } from "./Pages/PostDetails";
 import { useAuth } from "./Context/AuthProvider";
-
+ 
 function App() {
   const { isLoggedIn } = useAuth();
   const router = createBrowserRouter(

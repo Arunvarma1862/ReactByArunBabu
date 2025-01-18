@@ -1,0 +1,8 @@
+.activeNav{
+    background-color: blue;
+    color: white;
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+}

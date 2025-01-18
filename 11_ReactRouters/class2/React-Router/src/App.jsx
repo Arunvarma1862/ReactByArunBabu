@@ -7,7 +7,7 @@ import AuthProvider from './Context/AuthProvider'
 
 
 const router = createBrowserRouter(createRoutesFromElements(<Route>
-  <Route path="/" element={<RootLayout/>}>
+  <Route path="/" element={<RootLayout/>}> 
      <Route index element={<Home/>}/>
      <Route path='about' element={<About/>}/>
      <Route path='contact' element={<Contact/>}/>
@@ -19,7 +19,7 @@ const router = createBrowserRouter(createRoutesFromElements(<Route>
 </Route>))
 
 function App() {
-  return (
+  return ( 
     <AuthProvider>
       <RouterProvider router={router}/>
     </AuthProvider>

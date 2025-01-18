@@ -5,8 +5,8 @@ import { redirect, useLoaderData } from 'react-router-dom'
 export async  function loader({request},{isLoggedIn}){
   const endpoint="https://jsonplaceholder.typicode.com/posts"
   // console.log(request)
-  const url= new URL(request.url)
-  // console.log(url)
+  const url= new URL(request.url) 
+  // console.log(url) 
   if(!isLoggedIn){
     return redirect(`/login?redirectTo=${url.pathname}`)
   }
@@ -17,7 +17,6 @@ export async  function loader({request},{isLoggedIn}){
   const responseData= await response.json()
   return responseData
 }
-
 function Posts() {
   const posts= useLoaderData()
   return (
