@@ -1,10 +1,12 @@
 import React from 'react'
-import { Outlet ,Link, NavLink} from 'react-router-dom'
+import { Outlet ,Link, NavLink, useNavigation} from 'react-router-dom'
 import styles from "./Root.module.css"
 import { useAuth } from '../Context/AuthProvider'
+import LoadingSpinner from "../assets/LoadingSpinner.svg"
 
 function Root() {
     const {isLogged,setLoggedIn}=useAuth()
+    const navigation =useNavigation()
   return (
     <>
     <div>
@@ -35,7 +37,8 @@ function Root() {
         <hr />
     </div>
     <main>
-        <Outlet/>
+        {navigation.state==="loading"?<img src={LoadingSpinner} alt="image" />: <Outlet/>}
+        {/* <Outlet/> */}
     </main>
     </>
     
