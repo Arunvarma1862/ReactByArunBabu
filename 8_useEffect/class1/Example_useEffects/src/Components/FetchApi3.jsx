@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import User from "./User";
 
-const URL = "https://jsonplaceholder.typicode.com/usersss";
+const URL = "https://jsonplaceholder.typicode.com/users";
 function FetchApi3() {
   const [user, setUsers] = useState([]);
   const [isLoading, setisLoading] = useState(true);

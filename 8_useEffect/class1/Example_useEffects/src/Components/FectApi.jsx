@@ -10,7 +10,7 @@ function FectApi() {
   useEffect(() => {
     fetch(URL)
       .then((response) => {
-        return response.json();
+        return response.json(); 
       })
       .then((data) => {
         console.log(data);

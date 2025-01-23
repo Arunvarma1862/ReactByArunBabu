@@ -4,6 +4,7 @@ import FectApi from "./Components/FectApi";
 import FetchApi2 from "./Components/FetchApi2";
 import FetchApi3 from "./Components/FetchApi3";
 import CleanUpFunction from "./Components/CleanUpFunction";
+import FetchApi4 from "./Components/FetchApi4";
 import { useState } from "react";
 import MouseMove from "./Components/MouseMove";
 import UserForm from "./Components/UserForm";
@@ -16,7 +17,7 @@ function App() {
   const [showComponent, setShowComponent] = useState(true);
 
   return (
-    <>
+    <> 
       <div className="App">
         <label htmlFor="showComponent">ShowComponent</label>
         <input
@@ -28,8 +29,9 @@ function App() {
         />
           {/* {showComponent && <ExampleUseEffect />} */}
         {/* {showComponent && <FectApi />} */}
-        {showComponent && <FetchApi2 />}
+        {/* {showComponent && <FetchApi2 />} */}
         {/* {showComponent && <FetchApi3 />}  */}
+        {showComponent && <FetchApi4/>}
         {/* {showComponent && <CleanUpFunction />} */}
         {/* {showComponent && <MouseMove />} */}
         {/* {showComponent && <FetchApi2 />} */}

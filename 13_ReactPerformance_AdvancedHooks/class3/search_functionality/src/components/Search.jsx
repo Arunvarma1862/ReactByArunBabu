@@ -13,6 +13,9 @@ function Search() {
     function handleChange(e){
        setSearch(e.target.value)
     }
+    function handle(){
+        console.log(search)
+    }
     const filteredData= data.filter((item)=>{
         return item.name.toLowerCase().includes(search.toLowerCase())
     })
@@ -29,6 +32,7 @@ function Search() {
                 <li>{item.name}</li>
             </ul>
         })}
+        <button onClick={handle}>Search</button>
     </div>
   )
 }

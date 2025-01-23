@@ -6,9 +6,9 @@ function User({ id, name, username, phone, email, website, address }) {
       style={{
         padding: "1rem",
         margin: "1rem",
-        border: "1px solid blue",
+        border: "1px solid blue", 
         backgroundColor: "green",
-        color: "white",
+        color: "white", 
         textAlign: "center",
       }}
     >

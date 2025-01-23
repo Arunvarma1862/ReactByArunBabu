@@ -5,8 +5,11 @@ import { useRef } from "react";
 // focus on input when component mounts
 function UserForm() {
   const usernameref = useRef();
-  useEffect(()=>{
+  useEffect(()=>{ 
     usernameref.current.focus()
+    return(()=>{
+      console.log("cleanup function")
+    })
   },[])
   return (
     <form action="">
